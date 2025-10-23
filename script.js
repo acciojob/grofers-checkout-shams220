@@ -1,23 +1,27 @@
+const prices = document.querySelectorAll('.price');
 
-const prices = document.querySelectorAll('.price')
-const total = [...prices].reduce((a,b)=>{
-	return a+ Number(b.textContent);
-},0)
+const sumBtn = document.createElement('button');
+sumBtn.classList.add('sumBtn');
+sumBtn.textContent = "Click me";
+document.body.appendChild(sumBtn); 
 
-const row = document.createElement('tr');
-const col1 = document.createElement("td");
-const col2 = document.createElement('td');
+const sumFn = () => {
+  const total = [...prices].reduce((a, b) => a + Number(b.textContent), 0);
 
-col1.classList.add("item");
-col2.classList.add("price");
+  const row = document.createElement('tr');
+  const col1 = document.createElement("td");
+  const col2 = document.createElement('td');
 
-row.appendChild(col1)
-row.appendChild(col2)
+  col1.classList.add("item");
+  col2.classList.add("price");
 
-col1.textContent = "Total sum";
-col2.textContent = total;
+  col1.textContent = "Total sum";
+  col2.textContent = total;
 
-document.querySelector('table').appendChild(row);
+  row.appendChild(col1);
+  row.appendChild(col2);
 
+  document.querySelector('table').appendChild(row);
+};
 
-
+sumBtn.addEventListener('click', sumFn);
