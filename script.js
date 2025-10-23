@@ -21,7 +21,8 @@ sumbutton.addEventListener('click',()=>{
 	 total = [...prices].reduce((a,b)=>{
 	return a+Number(b.textContent);
 },0)
- col2.textContent = total;
+	document.getElementById('ans').textContent = String(total);
+ 
 })
 // const prices = document.querySelectorAll('.price');
 
