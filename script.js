@@ -1,5 +1,5 @@
 
-const prices = document.querySelectorAll('.prices')
+const prices = document.querySelectorAll('.price')
 const total = [...prices].reduce((a,b)=>{
 	return a+ Number(b.textContent);
 },0)
@@ -15,8 +15,8 @@ col2.classList.add("price");
 row.appendChild(col1)
 row.appendChild(col2)
 
-col1.textContent("Total sum");
-col2.textContent(total);
+col1.textContent = "Total sum";
+col2.textContent = total;
 
 document.querySelector('table').appendChild(row);
 
