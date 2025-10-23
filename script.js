@@ -11,7 +11,7 @@ const tablebody = document.querySelector('tbody');
 row.appendChild(col1);
 row.appendChild(col2);
 tablebody.appendChild(row)
-tablebody.appendChild(sumbutton)
+document.querySelector('body').appendChild(sumbutton)
 col1.textContent = "total";
 
 
@@ -22,11 +22,7 @@ sumbutton.addEventListener('click',()=>{
 	return a+Number(b.textContent);
 },0)
  col2.textContent = total;
-	
 })
-
-
-
 // const prices = document.querySelectorAll('.price');
 
 // const sumBtn = document.createElement('button');
