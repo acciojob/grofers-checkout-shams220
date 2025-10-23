@@ -8,8 +8,7 @@ const row = document.createElement('tr');
 const col1 = document.createElement("td");
 const col2 = document.createElement('td');
 
-row.classList.add("item");
-col1.classList.add("price");
+col1.classList.add("item");
 col2.classList.add("price");
 
 row.appendChild(col1)
